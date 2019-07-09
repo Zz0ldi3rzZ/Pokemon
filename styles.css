@@ -1,0 +1,9 @@
+.pokemons{
+  border: 2px solid DodgerBlue;
+  border-radius: 8px;
+  margin: 30px;
+}
+
+input{
+  margin: 30px
+}

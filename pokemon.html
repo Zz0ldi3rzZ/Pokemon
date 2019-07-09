@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+  <body ng-app="myApp" ng-controller="controller">
+    <div class="" >
+      <input id="getPokemonInput" type="text">
+      <button id="pokemonId"type="button" name="button" ng-click="getPokemon()">Get Pokemon</button>
+    </div>
+    <div ng-if="pokemonList.length == 0">
+      <p>No pokemon captured yet</p>
+    </div>
+    <div class="row" ng-if="pokemonList.length > 0" ng-repeat="pokemon in pokemonList">
+      <div class="col-md-4 pokemons">
+          <p>Pokemon id: <b>{{pokemon.id}}</b></p>
+          <p>Pokemon Name: <b>{{pokemon.name}}</b></p>
+          <img src="{{pokemon.sprites.front_default}}">
+      </div>
+    </div>
+    <script src="testing.js"></script>
+  </body>
+</html>
